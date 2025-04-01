@@ -20,6 +20,18 @@
             // 3: 6 people
             // Commit your changes and add screnshot evidence of your program running to the Readme
 
+            Console.WriteLine("Please input the number of people who are going to the theme park.");
+            int people = Convert.ToInt32(Console.ReadLine());
+
+            double charge = people * 15;
+
+            if (people > 6)
+            {
+                charge = charge - 5;
+            }
+
+            Console.WriteLine($"The total charge is {charge}");
+
         }
     }
 }
