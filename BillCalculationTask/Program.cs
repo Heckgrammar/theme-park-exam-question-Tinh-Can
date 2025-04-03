@@ -21,11 +21,15 @@
             // Commit your changes and add screnshot evidence of your program running to the Readme
 
             Console.WriteLine("Please input the number of people who are going to the theme park.");
-            int people = Convert.ToInt32(Console.ReadLine());
+            int people;
+            while (!int.TryParse(Console.ReadLine(), out people))
+            {
+                Console.WriteLine("Input invalid.");
+            }
 
             double charge = people * 15;
 
-            if (people > 6)
+            if (people > 5)
             {
                 charge = charge - 5;
             }
